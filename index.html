@@ -8,35 +8,43 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="scoreboard-container">
-                <div class="home-container">
-                    <h1 class="team">HOME</h1>
-                    <p id="home-score-el" class="score">0</p>
-                    
-                    <button id="home_1">+ 1</button>
-                    <button id="home_2">+ 2</button>
-                    <button id="home_3">+ 3</button>
+            <div class="scoreboard-section">
+                <div class="scoreboard-container">
+                    <div class="home-container">
+                        <h1 class="team-title">HOME</h1>
+                        <p id="home-score-el" class="score">0</p>
+                        
+                        <button id="home_1" onclick="addOne(this.id)">+ 1</button>
+                        <button id="home_2" onclick="addTwo(this.id)">+ 2</button>
+                        <button id="home_3" onclick="addThree(this.id)">+ 3</button>
+                    </div>
+
+                    <div class="time-container">
+                        <div>
+                            <h2>TIME</h2>
+                            <h3 class="time" id="timer">00:30</h3>
+                        </div>
+                        
+                        <div>
+                            <h2>PERIOD</h2>
+                            <h3 class="time" id="period">1</h3>
+                        </div>
+                    </div>
+
+                    <div class="guest-container">
+                        <h1 class="team-title">GUEST</h1>
+                        <p id="guest-score-el" class="score">0</p>
+
+                        <button id="guest_1" onclick="addOne(this.id)">+ 1</button>
+                        <button id="guest_2" onclick="addTwo(this.id)">+ 2</button>
+                        <button id="guest_3" onclick="addThree(this.id)">+ 3</button>
+                    </div>
                 </div>
 
-                <div class="time-container">
-                    <div>
-                        <h2>TIME</h2>
-                    </div>
-                    
-                    <div>
-                        <h2>PERIOD</h2>
-                        <h3 class="period">4</h3>
-                    </div>
-                </div>
-
-                <div class="guest-container">
-                    <h1 class="team">GUEST</h1>
-                    <p id="guest-score-el" class="score">52</p>
-                    <button id="guest_1">+ 1</button>
-                    <button id="guest_2">+ 2</button>
-                    <button id="guest_3">+ 3</button>
-                </div>
+                <button id="newgame" onclick="startGame()">NEW GAME</button>
+                
             </div>
         </div>
+        <script src="/main.js"></script>
     </body>
 </html>

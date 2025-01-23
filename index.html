@@ -2,30 +2,39 @@
 <html>
     <head>
         <link rel="stylesheet" href="/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="wrapper">
             <div class="scoreboard-container">
                 <div class="home-container">
-                    <h1>HOME</h1>
-                    <div id="home-score-el">0</div>
-
-                    <button>+ 1</button>
-                    <button>+ 2</button>
-                    <button>+ 3</button>
+                    <h1 class="team">HOME</h1>
+                    <p id="home-score-el" class="score">0</p>
+                    
+                    <button id="home_1">+ 1</button>
+                    <button id="home_2">+ 2</button>
+                    <button id="home_3">+ 3</button>
                 </div>
 
                 <div class="time-container">
-                    <h2>TIME</h2>
-                    <h2>quarter</h2>
+                    <div>
+                        <h2>TIME</h2>
+                    </div>
+                    
+                    <div>
+                        <h2>PERIOD</h2>
+                        <h3 class="period">4</h3>
+                    </div>
                 </div>
 
                 <div class="guest-container">
-                    <h1>GUEST</h1>
-                    <div id="guest-score-el">0</div>
-                    <button>+ 1</button>
-                    <button>+ 2</button>
-                    <button>+ 3</button>
+                    <h1 class="team">GUEST</h1>
+                    <p id="guest-score-el" class="score">52</p>
+                    <button id="guest_1">+ 1</button>
+                    <button id="guest_2">+ 2</button>
+                    <button id="guest_3">+ 3</button>
                 </div>
             </div>
         </div>

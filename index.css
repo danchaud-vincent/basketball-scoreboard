@@ -9,6 +9,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-image: url("/sources/images/raptors_arena.jpg");
+    background-size: cover;
     
 }
 

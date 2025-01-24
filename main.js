@@ -32,6 +32,9 @@ function addOne(id){
         guestCount += 1;
         scoreGuestEl.textContent = guestCount;
     }
+
+    // check who is winning
+    isWinning()
     
 }
 
@@ -53,6 +56,9 @@ function addTwo(id){
         guestCount += 2;
         scoreGuestEl.textContent = guestCount;
     }
+
+    // check who is winning
+    isWinning()
 }
 
 function addThree(id){
@@ -73,6 +79,9 @@ function addThree(id){
         guestCount += 3;
         scoreGuestEl.textContent = guestCount;
     } 
+
+    // check who is winning
+    isWinning()
 }
 
 // Function winner
@@ -91,6 +100,22 @@ function winner(){
         showEl.innerHTML = "GUEST's TEAM WINS THE GAME";
         showEl.style.backgroundImage = "url('/sources/videos/guest_win.gif')";
         showEl.style.backgroundSize = "cover";
+    }
+}
+
+function isWinning(){
+
+    if (homeCount>guestCount){
+        scoreHomeEl.style.border = "2px solid #F94F6D";
+        scoreGuestEl.style.borderStyle = "none";
+    }
+    else if (guestCount>homeCount){
+        scoreGuestEl.style.border = "2px solid #F94F6D";
+        scoreHomeEl.style.border = "none";
+    }
+    else{
+        scoreGuestEl.style.border = "none";
+        scoreHomeEl.style.border = "none";
     }
 }
 
@@ -128,17 +153,19 @@ function startGame(){
     scoreHomeEl.textContent = homeCount;
     scoreGuestEl.textContent = guestCount;
 
-    // reset show-section
+    // reset html
     showEl.style.visibility = "hidden";
     showEl.innerHTML = "";
     showEl.style.backgroundImage = "none";
+    scoreGuestEl.style.border = "none";
+    scoreHomeEl.style.border = "none";
 }
 
 
 // Timer function
 function timer(){
 
-    var sec = 10;
+    var sec = 5;
 
     var countdown = setInterval(function(){
         document.getElementById('timer').innerHTML='00:'+ sec.toString().padStart(2,"0");

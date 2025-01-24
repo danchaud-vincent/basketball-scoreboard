@@ -47,9 +47,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background: none;
-    background-image: none;
 }
 
 .scoreboard-container{
@@ -67,7 +64,7 @@ body{
     background: black;
 
     padding: 40px;
-    border: 2px solid #F94F6D;
+    /* border: 2px solid #F94F6D; */
 }
 
 .time{

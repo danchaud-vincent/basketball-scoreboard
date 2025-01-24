@@ -91,14 +91,14 @@ function winner(){
         console.log("The Home team Won the game") 
         showEl.style.visibility = "visible";
         showEl.innerHTML = "HOME's TEAM WINS THE GAME";
-        showEl.style.backgroundImage = "url('/sources/videos/home_celebrate.gif')";
+        showEl.style.backgroundImage = "url('sources/videos/home_celebrate.gif')";
         showEl.style.backgroundSize = "cover";
     }
     else{
         console.log("The Guest team Won the game") 
         showEl.style.visibility = "visible";
         showEl.innerHTML = "GUEST's TEAM WINS THE GAME";
-        showEl.style.backgroundImage = "url('/sources/videos/guest_win.gif')";
+        showEl.style.backgroundImage = "url('sources/videos/guest_win.gif')";
         showEl.style.backgroundSize = "cover";
     }
 }

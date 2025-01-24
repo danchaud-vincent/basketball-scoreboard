@@ -7,6 +7,7 @@ let showEl = document.getElementById("showEl");
 
 let homeCount = 0;
 let guestCount = 0;
+let startValue = false;
 let timerValue = null;
 let periodValue = 1;
 let winScore = 21;
@@ -14,6 +15,11 @@ let winScore = 21;
 
 // Functions addOne, addTwo, addThree
 function addOne(id){
+
+    // dont increment if the game has not started
+    if (startValue === false){
+        return
+    }
 
     // check the id of the button to increment the right score
     if (id.includes("home") == true){
@@ -30,6 +36,11 @@ function addOne(id){
 }
 
 function addTwo(id){
+
+    // dont increment if the game has not started
+    if (startValue === false){
+        return
+    }
     
     // check the id of the button to increment the right score
     if (id.includes("home") == true){
@@ -45,6 +56,11 @@ function addTwo(id){
 }
 
 function addThree(id){
+
+    // dont increment if the game has not started
+    if (startValue === false){
+        return
+    }
     
     // check the id of the button to increment the right score
     if (id.includes("home") == true){
@@ -59,24 +75,30 @@ function addThree(id){
     } 
 }
 
-// Function win
-function win(){
+// Function winner
+function winner(){
 
-    if (homeCount>winScore){
+    if (homeCount>guestCount){
         console.log("The Home team Won the game") 
         showEl.style.visibility = "visible";
         showEl.innerHTML = "HOME's TEAM WINS THE GAME";
-        showEl.style.backgroundColor = "red";
+        showEl.style.backgroundImage = "url('/sources/videos/home_celebrate.gif')";
+        showEl.style.backgroundSize = "cover";
     }
     else{
         console.log("The Guest team Won the game") 
+        showEl.style.visibility = "visible";
         showEl.innerHTML = "GUEST's TEAM WINS THE GAME";
+        showEl.style.backgroundImage = "url('/sources/videos/guest_win.gif')";
+        showEl.style.backgroundSize = "cover";
     }
 }
 
 
 // NEW GAME function
 function startGame(){
+
+    startValue = true;
 
     // Get a reference to the last interval + 1
     const interval_id = window.setInterval(function(){}, Number.MAX_SAFE_INTEGER);
@@ -105,13 +127,18 @@ function startGame(){
 
     scoreHomeEl.textContent = homeCount;
     scoreGuestEl.textContent = guestCount;
+
+    // reset show-section
+    showEl.style.visibility = "hidden";
+    showEl.innerHTML = "";
+    showEl.style.backgroundImage = "none";
 }
 
 
 // Timer function
 function timer(){
 
-    var sec = 5;
+    var sec = 10;
 
     var countdown = setInterval(function(){
         document.getElementById('timer').innerHTML='00:'+ sec.toString().padStart(2,"0");
@@ -132,7 +159,7 @@ function timer(){
             }
             else{
                 // check who has won the game
-                win()
+                winner()
             }
         }
 

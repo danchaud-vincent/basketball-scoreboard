@@ -6,7 +6,7 @@ body{
 
 @font-face {
     font-family: cursedTimer;
-    src: url("/sources/fonts/CursedTimer_font.ttf");
+    src: url("sources/fonts/CursedTimer_font.ttf");
 }
 
 .wrapper{

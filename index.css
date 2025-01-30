@@ -6,7 +6,7 @@ body{
 
 @font-face {
     font-family: cursedTimer;
-    src: url("/sources/fonts/CursedTimer_font.ttf");
+    src: url("sources/fonts/CursedTimer_font.ttf");
 }
 
 .wrapper{
@@ -16,7 +16,7 @@ body{
     align-items: center;
     text-align: center;
 
-    background-image: url("/sources/images/raptors_arena.jpg");
+    background-image: url("sources/images/raptors_arena.jpg");
     background-size: cover;
     color: white;
 }
